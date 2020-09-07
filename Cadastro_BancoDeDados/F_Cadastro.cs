@@ -48,10 +48,11 @@ namespace Cadastro_BancoDeDados
         {
             string nome = tb_nome1.Text;
             string sobreNome = tb_sobreNome.Text;
-            int idade = Convert.ToInt32(tb_idade.Text);
+            int conver = Convert.ToInt32(tb_idade.Text);
+            int idade = conver;
             string endereco = tb_endereco.Text;
 
-            if(nome != null && sobreNome != null && idade != null && endereco != null)
+            if(nome != null && sobreNome != null && idade != 0 && endereco != null)
             {
 
                 Cadastrar cadastro = new Cadastrar(nome, sobreNome, idade, endereco);
