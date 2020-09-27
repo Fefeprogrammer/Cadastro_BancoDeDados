@@ -80,6 +80,7 @@
             this.tb_senha.Name = "tb_senha";
             this.tb_senha.Size = new System.Drawing.Size(214, 20);
             this.tb_senha.TabIndex = 4;
+            this.tb_senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_senha_KeyDown);
             // 
             // btn_fechar
             // 

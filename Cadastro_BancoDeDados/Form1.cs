@@ -45,5 +45,16 @@ namespace Cadastro_BancoDeDados
             login_tela.Close();
             Application.Exit();
         }
+
+        private void tb_senha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                string usuario = tb_usuario.Text;
+                string senha = tb_senha.Text;
+
+                Login login = new Login(usuario, senha);
+            }
+        }
     }
 }

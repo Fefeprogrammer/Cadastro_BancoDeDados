@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Alunos.cs" />
     <Compile Include="Classes\Cadastrar.cs" />
     <Compile Include="Classes\Conexao.cs" />
     <Compile Include="Classes\Login.cs" />
@@ -66,6 +67,11 @@
     </Compile>
     <Compile Include="F_Principal.Designer.cs">
       <DependentUpon>F_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myDataBaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDataBaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +94,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="myDataBaseDataSet.xsc">
+      <DependentUpon>myDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="myDataBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myDataBaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myDataBaseDataSet.xss">
+      <DependentUpon>myDataBaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,7 +119,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controler\" />
     <Folder Include="dao\" />
+    <Folder Include="Model\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_cadastro.png" />

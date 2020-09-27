@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Informações do Aluno</legend>
+            <label for="cnome">Nome:</label>
+            <input type="text" name="tnome" id="cnome" placeholder="NOME DO ALUNO" required />
+            <br />
+            <label id="csobreNome">Sobre Nome:</label>
+            <input type="text" name="tsobreNome" id="csobreNome" placeholder="SOBRE NOME DO ALUNO" required />
+            <br />
+            <label for="cemail">E-mail:</label>
+            <input type="email" name="temail" id="cemail" placeholder="exemple@exemple.com" required />
+            <br />
+            <label for="ctelefone">Telefone:</label>
+            <input type="tel" name="ttelefone" id="ctelefone" placeholder="(ddd)1456894" required />
+            <br />
+            <fieldset class="endereco">
+                <legend>Endereço</legend>
+                <label for="crua">Rua:</label>
+                <input type="text" name="trua" id="crua" required />
+                <label for="cnum">Numero:</label>
+                <input type="number" name="tnum" id="cnum" required />
+                <br />
+                <label for="ccep">CEP:</label>
+                <input type="text" name="tcep" id="ccep" required />
+            </fieldset>
+            <input type="submit" value="Cadastrar" />
+        </fieldset>
+    </form>
+</body>
+</html>

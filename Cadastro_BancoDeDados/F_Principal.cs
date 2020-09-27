@@ -22,5 +22,35 @@ namespace Cadastro_BancoDeDados
             F_Cadastro cadastro = new F_Cadastro();
             cadastro.ShowDialog();
         }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void F_Principal_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'myDataBaseDataSet.Alunos'. Você pode movê-la ou removê-la conforme necessário.
+            this.alunosTableAdapter.Fill(this.myDataBaseDataSet.Alunos);
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.alunosTableAdapter.FillBy(this.myDataBaseDataSet.Alunos);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
