@@ -34,6 +34,7 @@
             this.tb_usuario = new System.Windows.Forms.TextBox();
             this.tb_senha = new System.Windows.Forms.TextBox();
             this.btn_fechar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_entrar
@@ -93,12 +94,24 @@
             this.btn_fechar.UseVisualStyleBackColor = true;
             this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(93, 355);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(284, 47);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "CADASTRAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // F_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cadastro_BancoDeDados.Properties.Resources.fundo;
             this.ClientSize = new System.Drawing.Size(481, 426);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_fechar);
             this.Controls.Add(this.tb_senha);
             this.Controls.Add(this.tb_usuario);
@@ -123,6 +136,7 @@
         private System.Windows.Forms.TextBox tb_usuario;
         private System.Windows.Forms.TextBox tb_senha;
         private System.Windows.Forms.Button btn_fechar;
+        private System.Windows.Forms.Button button1;
     }
 }
 

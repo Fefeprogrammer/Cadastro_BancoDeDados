@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cadastro_BancoDeDados.Classes;
+using Cadastro_BancoDeDados.View;
 
 namespace Cadastro_BancoDeDados
 {
@@ -55,6 +56,12 @@ namespace Cadastro_BancoDeDados
 
                 Login login = new Login(usuario, senha);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = new Cadastro();
+            cadastro.ShowDialog();
         }
     }
 }
