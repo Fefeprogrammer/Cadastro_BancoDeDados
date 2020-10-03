@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cadastro_BancoDeDados.Controler;
 
 namespace Cadastro_BancoDeDados
 {
@@ -51,6 +52,13 @@ namespace Cadastro_BancoDeDados
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void btn_matriculados_Click(object sender, EventArgs e)
+        {
+            mostrarController mostrar = new mostrarController();
+            mostrar.Mostrar(true);
+            MessageBox.Show(mostrar.dr.ToString());
         }
     }
 }

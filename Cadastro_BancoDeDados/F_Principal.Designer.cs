@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Principal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_matriculados = new System.Windows.Forms.Button();
             this.btn_matricula = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +44,6 @@
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.alunosTableAdapter = new Cadastro_BancoDeDados.myDataBaseDataSetTableAdapters.AlunosTableAdapter();
-            this.btn_matriculados = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).BeginInit();
@@ -60,6 +60,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 107);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_matriculados
+            // 
+            this.btn_matriculados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_matriculados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_matriculados.Location = new System.Drawing.Point(196, 21);
+            this.btn_matriculados.Name = "btn_matriculados";
+            this.btn_matriculados.Size = new System.Drawing.Size(125, 86);
+            this.btn_matriculados.TabIndex = 3;
+            this.btn_matriculados.Text = "Alunos Matriculados";
+            this.btn_matriculados.UseVisualStyleBackColor = false;
+            this.btn_matriculados.Click += new System.EventHandler(this.btn_matriculados_Click);
             // 
             // btn_matricula
             // 
@@ -155,17 +167,6 @@
             // alunosTableAdapter
             // 
             this.alunosTableAdapter.ClearBeforeFill = true;
-            // 
-            // btn_matriculados
-            // 
-            this.btn_matriculados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_matriculados.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_matriculados.Location = new System.Drawing.Point(196, 21);
-            this.btn_matriculados.Name = "btn_matriculados";
-            this.btn_matriculados.Size = new System.Drawing.Size(125, 86);
-            this.btn_matriculados.TabIndex = 3;
-            this.btn_matriculados.Text = "Alunos Matriculados";
-            this.btn_matriculados.UseVisualStyleBackColor = false;
             // 
             // F_Principal
             // 

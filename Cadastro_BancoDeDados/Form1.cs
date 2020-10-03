@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cadastro_BancoDeDados.Classes;
+using Cadastro_BancoDeDados.Controler;
 using Cadastro_BancoDeDados.View;
 
 namespace Cadastro_BancoDeDados
@@ -25,19 +26,24 @@ namespace Cadastro_BancoDeDados
             string usuario = tb_usuario.Text;
             string senha = tb_senha.Text;
 
-            Login login = new Login(usuario, senha);
+            loginController login = new loginController();
             F_Principal principal = new F_Principal();
+
+            login.Entrar(usuario, senha);
+
+            
+                if (login.tem == true)
+                {
+                    principal.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario e/ou senha incorretos");
+                }
+            
            
 
-            if(login.getConectado() == true)
-            {
-                principal.ShowDialog();
-                
-            }
-            else
-            {
-                MessageBox.Show(login.getErro());
-            }
+            
         }
 
         private void btn_fechar_Click(object sender, EventArgs e)
@@ -49,13 +55,7 @@ namespace Cadastro_BancoDeDados
 
         private void tb_senha_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
-            {
-                string usuario = tb_usuario.Text;
-                string senha = tb_senha.Text;
-
-                Login login = new Login(usuario, senha);
-            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -3,65 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Cadastro_BancoDeDados.Classes
 {
     class Login
     {
-        private string usuario = "admin";
-        private string senha = "admin";
-        private bool conectado;
-        private string erro;
+        public bool tem = false;
+        public string mensagem;
+        SqlDataReader dr;
+        Conexao conexao = new Conexao();
 
-        public Login(string usuario, string senha)
+        SqlCommand cmd = new SqlCommand();
+
+        public bool VerificarLogin(string usuario, string senha)
         {
-            setConectado(false);
+            conexao.Conectar();
+            cmd.CommandText = "SELECT usuario, senha FROM Login WHERE usuario = @usuario and senha = @senha";
 
-            if(this.getUsuario() == usuario)
+            cmd.Parameters.AddWithValue("@usuario", usuario);
+            cmd.Parameters.AddWithValue("@senha", senha);
+
+            try
             {
-                setConectado(true);
-            }
-            else
+                cmd.Connection = conexao.Conectar();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    this.tem = true;
+                    this.mensagem = "Conectado com sucesso";
+                }
+            }catch(SqlException e)
             {
-                setConectado(false);
-                this.erro = "Usuario e/ou senha incorretos. Tente novamente";
+                this.mensagem = "Erro: " + e;
             }
-        }
 
-        public string getUsuario()
-        {
-            return this.usuario;
+            return tem;
         }
-
-        public void setUsuario(string usuario)
-        {
-            this.usuario = usuario;
-        }
-
-        public string getSenha()
-        {
-            return this.senha;
-        }
-
-        public void setSenha(string senha)
-        {
-            this.senha = senha;
-        }
-
-        public bool getConectado()
-        {
-            return this.conectado;
-        }
-
-        public void setConectado(bool conectado)
-        {
-            this.conectado = conectado;
-        }
-
-        public string getErro()
-        {
-            return this.erro;
-        }
-
     }
+
 }

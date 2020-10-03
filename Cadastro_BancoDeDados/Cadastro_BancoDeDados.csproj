@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Alunos.cs" />
+    <Compile Include="Controler\cadastroController.cs" />
+    <Compile Include="Controler\loginController.cs" />
+    <Compile Include="Controler\mostrarController.cs" />
     <Compile Include="Model\Cadastrar.cs" />
     <Compile Include="Model\cadastroLogin.cs" />
     <Compile Include="Model\Conexao.cs" />
@@ -130,7 +133,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controler\" />
     <Folder Include="dao\" />
   </ItemGroup>
   <ItemGroup>
