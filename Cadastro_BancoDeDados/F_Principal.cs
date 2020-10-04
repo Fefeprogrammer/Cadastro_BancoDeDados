@@ -56,9 +56,21 @@ namespace Cadastro_BancoDeDados
 
         private void btn_matriculados_Click(object sender, EventArgs e)
         {
-            mostrarController mostrar = new mostrarController();
-            mostrar.Mostrar(true);
-            MessageBox.Show(mostrar.dr.ToString());
+            /*mostrar.Mostrar(true);
+            MessageBox.Show(mostrar.dr.ToString());*/
+
+            /* mostrarController mostrar = new mostrarController();
+             dataGridView1.DataSource = mostrar.dr;
+             dataGridView1.te*/
+
+            try
+            {
+                this.alunosTableAdapter.FillBy(this.myDataBaseDataSet.Alunos);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }
