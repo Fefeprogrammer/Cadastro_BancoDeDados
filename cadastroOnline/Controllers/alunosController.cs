@@ -6,15 +6,9 @@ using System.Web.Mvc;
 
 namespace cadastroOnline.Controllers
 {
-    public class HomeController : Controller
+    public class alunosController : Controller
     {
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Formulario()
+        public ActionResult Alunos()
         {
             return View();
         }
